@@ -96,8 +96,8 @@ const cartModalContent=
     return(
        <Modal className={styles.cart} hidecart={props.hidecart}>
           {!isSubmitting && !didSubmit && cartModalContent}
-      {isSubmitting && isSubmittingModalContent}
-      {!isSubmitting && didSubmit && didSubmitModalContent}
+          {isSubmitting && isSubmittingModalContent}
+          {!isSubmitting && didSubmit && didSubmitModalContent}
        </Modal> 
     )
 }

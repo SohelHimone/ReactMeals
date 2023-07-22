@@ -30,3 +30,16 @@
       transform: translateY(0);
     }
   }
+
+  .newmealbtn{
+    font: inherit;
+    color: black;
+    cursor: pointer;
+    background-color: rgb(76, 240, 76);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px; 
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 400;
+  }

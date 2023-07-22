@@ -33,6 +33,7 @@ import MealItem from "./MealItem/MealItem";
 const MealAvailable=()=>{
     const [meals,setMeals]=useState([]);
     const[loading,setLoading]=useState(true);
+    const [datachanged,setDatachange]=useState(false)
 
     useEffect(()=>{
         
@@ -56,7 +57,12 @@ const MealAvailable=()=>{
         }
 
         fetchdata()
-    },[])
+    },[datachanged])
+
+    const fetchDataOnChange = () => {
+        setDatachange((prevDataChanged) => !prevDataChanged);
+      };
+    
 
     if(loading){
         return(<section className={styles.loading}>
@@ -64,7 +70,9 @@ const MealAvailable=()=>{
         </section>)
     }
     return(
-       <section className={styles.meals}>
+        <>
+        <button onClick={fetchDataOnChange} className={styles.newmealbtn}>Check For New Meal</button>
+         <section className={styles.meals}>
            <ul>
             {meals.map((meal)=>
             <MealItem key={meal.id}
@@ -75,6 +83,9 @@ const MealAvailable=()=>{
             />)}
            </ul>
        </section>
+
+        </>
+       
     )
 }
 

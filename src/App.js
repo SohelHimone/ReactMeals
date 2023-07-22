@@ -25,7 +25,7 @@ function App() {
   }
 
   const showaddmealhandler=()=>{
-    setShowCart(true)
+    setShowAddmeal(true)
   }
 
   const hideaddmealhandler=()=>{

@@ -30,7 +30,7 @@ const Button=(props)=>{
 
     return(
       <>
-      {/* <button className={styles.addmeal} onClick={props.showAddmealcart}>Add Meal</button> */}
+      <button className={styles.addmeal} onClick={props.showAddmealcart}>Add Meal</button>
       <button className={btnanimate} onClick={props.showcart}>
         <span className={styles.icon}><FontAwesomeIcon icon={faCartShopping} /></span>
         <span className={styles.text}>Your Cart</span>
