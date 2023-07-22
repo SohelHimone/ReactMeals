@@ -1,0 +1,16 @@
+.section{
+    width: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.label{
+    font-size: 14px;
+    font-weight: 700;
+}
+.Input{
+    width: auto;
+    padding: 5px;
+}

@@ -1,0 +1,20 @@
+.orderDetails h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.orderDetails ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding-top: 5px;
+}

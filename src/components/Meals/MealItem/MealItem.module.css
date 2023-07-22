@@ -1,0 +1,33 @@
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px  30px;
+    border-bottom: 1px solid black;
+    border-radius: 20px;
+}
+
+.listdiv{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 5px 10px;
+    
+}
+.listdiv h3{
+    color:orange;
+}
+
+.desc{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+.price{
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,48 @@
+.cart{
+    width: 50%;
+    height: auto;
+    padding: 20px 50px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total{
+    width: 90%;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btndiv{
+    width: 90%;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.cartitemul{
+    width: auto;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.btnorder{
+  font: inherit;
+  color: white;
+  cursor: pointer;
+  background-color: #5a1a01;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 2rem;
+}
+.successcode{
+    color: green;
+    font-size: 16px;
+    font-weight: 700;
+}

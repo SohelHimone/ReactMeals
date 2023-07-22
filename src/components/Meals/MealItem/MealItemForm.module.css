@@ -1,0 +1,19 @@
+.form{
+    width: auto;
+    padding: 10px 20px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.btn{
+    padding: 8px 20px;
+    background-color: rgb(133, 31, 31);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+}
