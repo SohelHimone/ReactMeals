@@ -12,7 +12,7 @@ const CartItem=(props)=>{
                 <span>x {props.amount}</span>
             </div>
             <div className={styles.cartItembtn}>
-            <button className={styles.minusbtn} onClick={props.onRemove}>--</button>
+            <button className={styles.minusbtn} onClick={props.onRemove}>-</button>
             <button className={styles.plusbtn} onClick={props.onAdd}>+</button>
             </div>
 

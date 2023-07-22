@@ -61,3 +61,35 @@
 h2{
     color:orange;
 }
+
+
+@media (max-width: 767px){
+    
+    
+    .content{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    
+    .cartItembtn{
+        padding: 4px 8px;
+        border-radius: 6px;
+        /* border: 1px solid black; */
+        margin-bottom: 6px;
+       
+    }
+    .minusbtn{
+        font-size: 18px;
+        font-weight: 500;
+        color:black;
+        padding: 5px 12px;
+        border-radius: 5px;
+    }
+    .plusbtn{
+        font-size: 18px;
+        font-weight: 500;
+        color:black;
+        padding: 5px 12px;
+        border-radius: 5px;
+    }
+} 
