@@ -2,33 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from '../Meals/MealAvailable.module.css';
 import MealItem from "./MealItem/MealItem";
 
-// const Dummy_Meal=[
-//     {
-//         id:1,
-//         name:'Chicken',
-//         Price:'220',
-//         Desc:'Healty ...Protiens'
-//     },
-//     {
-//         id:2,
-//         name:'Panner',
-//         Price:'300',
-//         Desc:'Healty ...Protiens'
-//     },
-//     {
-//         id:3,
-//         name:'Roti',
-//         Price:'220',
-//         Desc:'Healty ...fit'
-//     },
-//     {
-//         id:4,
-//         name:'Vegetables',
-//         Price:'120',
-//         Desc:'Healty ...Greeny'
-//     }
-
-// ]
 
 const MealAvailable=()=>{
     const [meals,setMeals]=useState([]);
@@ -36,7 +9,7 @@ const MealAvailable=()=>{
     const [datachanged,setDatachange]=useState(false)
 
     useEffect(()=>{
-        
+
        const fetchdata=async()=>{
           const response =await fetch('https://meals-94397-default-rtdb.firebaseio.com/meals.json');
           const responedata=await response.json();
@@ -48,9 +21,14 @@ const MealAvailable=()=>{
                 id:key,
                 name:responedata[key].name,
                 price:responedata[key].price,
-                desc:responedata[key].desc
+                desc:responedata[key].desc,
+                image:responedata[key].imageurl,
+                deliveryTime:responedata[key].deliveryTime,
+                offer:responedata[key].offer,
+                rating:responedata[key].rating                
              })
           }
+          LoadData.reverse();
           console.log('loaddata',LoadData)
           setMeals(LoadData)
           setLoading(false)
@@ -80,6 +58,10 @@ const MealAvailable=()=>{
             name={meal.name}
             desc={meal.desc}
             price={meal.price}
+            image={meal.image}
+            deliveryTime={meal.deliveryTime}
+            offer={meal.offer}
+            rating={meal.rating} 
             />)}
            </ul>
        </section>

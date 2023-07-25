@@ -14,10 +14,11 @@
     flex-direction: column;
     width: auto;
     padding: 5px 10px;
-    
+    /* border:1px solid black;     */
+    position: relative;
 }
 .listdiv h3{
-    color:orange;
+    color:black;
 }
 
 .desc{
@@ -28,6 +29,133 @@
 }
 .price{
     font-size: 18px;
-    font-weight: 900;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+.imgdiv{
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+}
+.imgdiv img{
+    width: 100%;
+    height: 90%;
+    border-radius: 20px;
+}
+.offer{
+    position: absolute;
+    bottom: 30%;
+    margin: 0px 0px 1rem;
+    line-height: 1rem;
+    background: rgb(37, 111, 239);
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    border-radius: 0px 0.2rem 0.2rem 0px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 2;
+}
+.offer p{
+    font-size: 16px;
+    padding: 0px 10px;
+}
+.priceandtime{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    /* border: 1px solid black; */
+    padding: 5px 10px;
+}
+.deliveryTime{
+    font-weight: 700;
+}
+.nameandrating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+.rating{
+    width: auto;
+    height: auto;
+    background-color: rgb(1, 68, 1);
+    color: white;
+    padding: 4px 6px;
+    border-radius: 6px;
+}
+
+
+@media (max-width: 767px){
+    .list{
+        padding: 5px  16px;
+        border-bottom: 1px solid black;
+        border-radius: 20px;
+    }
+    
+    .listdiv{
+    
+        padding: 5px 10px;
+        position: relative;
+    }
+    .listdiv h3{
+        color:black;
+        font-size: 12px;
+    }
+    
+    .deliveryTime{
+        font-size: 9px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        font-style: italic;
+    }
+    .price{
+        font-size: 9px;
+        margin-bottom: 5px;
+    }
+    .imgdiv{
+        width: auto;
+        height: auto;
+        border-radius: 20px;
+    }
+    .imgdiv img{
+        width: 100%;
+        height: 90%;
+        border-radius: 20px;
+    }
+    .offer{
+        position: absolute;
+        bottom: 42%;
+        margin: 0px 0px 0.5rem;
+        line-height: 1rem;
+        background: rgb(37, 111, 239);
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        border-radius: 0px 0.2rem 0.2rem 0px;
+        width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        z-index: 2;
+    }
+    .offer p{
+        font-size: 8px;
+        padding: 0px 6px;
+    }
+    .priceandtime{
+       
+        padding: 3px 6px;
+    }
+    .deliveryTime{
+        font-weight: 700;
+    }
+    .nameandrating{
+        padding: 0px 5px;
+    }
+    .rating{
+        padding: 2px 4px;
+        border-radius: 4px;
+    }
+    
 }

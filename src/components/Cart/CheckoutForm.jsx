@@ -52,6 +52,7 @@ const Checkout = (props) => {
     }
     
     props.onConfirm({
+        id:Date().now,
         name:name,
         street:Street,
         postal:postal,
