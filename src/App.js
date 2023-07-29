@@ -13,18 +13,18 @@ function App() {
   
  
   const router=createBrowserRouter([
-    {path:'/ReatMeals',
+    {path:'/ReactMeals',
      element:<RootLayout/>,
      children:[{
-      path:'/ReatMeals',
+      path:'/ReactMeals',
       element:<Meal/>
      },
      {
-      path:'/ReatMeals/Dinningout',
+      path:'/ReactMeals/Dinningout',
       element:<DiningOut/>
      },
      {
-      path:'/ReatMeals/Nightout',
+      path:'/ReactMeals/Nightout',
       element:<Nightout/>
      }
     ]  

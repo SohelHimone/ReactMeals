@@ -9,13 +9,13 @@ const Navigation=()=>{
         <>
           <ul className={styles.navul}>
             <li>
-              <NavLink to="/ReatMeals" className={({isActive})=>isActive ? styles.active:undefined} end>Delivery</NavLink>
+              <NavLink to="/ReactMeals" className={({isActive})=>isActive ? styles.active:undefined} end>Delivery</NavLink>
             </li>
             <li>
-            <NavLink to="/ReatMeals/Dinningout" className={({isActive})=>isActive ? styles.active:undefined}>Dining Out</NavLink>
+            <NavLink to="/ReactMeals/Dinningout" className={({isActive})=>isActive ? styles.active:undefined}>Dining Out</NavLink>
             </li>
             <li>
-            <NavLink to="/ReatMeals/Nightout" className={({isActive})=>isActive ? styles.active:undefined}>Nightlife</NavLink>
+            <NavLink to="/ReactMeals/Nightout" className={({isActive})=>isActive ? styles.active:undefined}>Nightlife</NavLink>
             </li>
           </ul>
         </>

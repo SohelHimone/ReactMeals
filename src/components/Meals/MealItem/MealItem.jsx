@@ -12,10 +12,10 @@ const MealItem=(props)=>{
 
     const CartCtx=useContext(CartContext);
 
-    const AddcartItemhandler=(amount)=>{
+    const AddcartItemhandler=()=>{
          CartCtx.addItem({
             id:props.id,
-            amount:amount,
+            amount:1,
             name:props.name,
             price:priceNumeric
          })

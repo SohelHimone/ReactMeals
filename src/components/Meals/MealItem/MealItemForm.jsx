@@ -1,40 +1,38 @@
-import React, { useRef, useState } from "react";
-import Input from "../../UI/Input/Input";
+import React, {  useEffect,useContext, useState } from "react";
 import styles from '../MealItem/MealItemForm.module.css';
+import CartContext from "../../../store/cartContext/CartContext";
 
 const MealItemForm=(props)=>{
 
-    const AmountinputRef=useRef();
-    const [validAmount,setValidAmount]=useState(true);
- 
-    const submitFormHandler=(e)=>{
-        e.preventDefault();
-      
-        const enteredAmount= AmountinputRef.current.value;
-        const enteredAmountNumber= +enteredAmount;
 
-        if(enteredAmountNumber === 0 || enteredAmountNumber <1 || enteredAmountNumber >1000){
-            setValidAmount(false)
-            return;
+
+    const [incr,setIncr]=useState(0)
+    const cartCtx=useContext(CartContext);
+    
+    useEffect(() => {
+        if (cartCtx.totalAmount === 0) {
+          setIncr(0);
         }
-        //passing this props to addcart function bcoz all value are avaliable thier
-        props.onAddCartItem(enteredAmountNumber)
+      }, [cartCtx.totalAmount]);
+
+  
+        const quantityHandler = () => {
+            // Prevent the quantity from going below zero (if needed)
+            if (incr >= 0) {
+                setIncr((prevIncr) => prevIncr + 1);
+                // Pass the updated quantity to the parent component
+                props.onAddCartItem(incr + 1);
+            }
     }
+     
     return(
-        <form className={styles.form} onClick={submitFormHandler}>
-            <Input label='Amount'
-            ref={AmountinputRef} 
-            input={{
-                id:'amount',
-                type:'number',
-                min:'1',
-                max:'1000',
-                step:'1',
-                defaultValue:'1'
-            }}/>
-            <button className={styles.btn}>+ Add</button>
-            {!validAmount && <p>Please Entered The Valid Input in Amount(1-1000)</p>}
-        </form>
+        <div className={styles.quantitydiv}>
+           <label className={styles.qunatitylabel}>Qunatity</label>
+            <span className={styles.qunatityspan}>{incr}</span>
+            <button className={styles.btn} onClick={quantityHandler}>+ Add</button>
+        </div>
+            
+        
     )
 }
 

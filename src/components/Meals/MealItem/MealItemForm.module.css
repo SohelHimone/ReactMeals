@@ -1,4 +1,13 @@
-.form{
+
+.btn{
+    padding: 8px 20px;
+    background-color: rgb(133, 31, 31);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+}
+.quantitydiv{
     width: auto;
     padding: 10px 20px;
     background-color: bisque;
@@ -8,12 +17,14 @@
     align-items: center;
     border-radius: 20px;
 }
-
-.btn{
-    padding: 8px 20px;
-    background-color: rgb(133, 31, 31);
-    border-radius: 20px;
-    text-align: center;
-    color: white;
-    font-weight: 900;
+.qunatityspan{
+    background-color: white;
+    padding: 6px 20px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+.qunatitylabel{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
 }

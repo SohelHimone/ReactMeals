@@ -15,7 +15,8 @@ const Cart=(props)=>{
   const [didSubmit, setDidSubmit] = useState(false);
   const cartctx=useContext(CartContext);
   const hasItems=cartctx.items.length > 0;
-  
+
+
 
 
   const addCardItemhandler=(item)=>{
@@ -47,8 +48,7 @@ const Cart=(props)=>{
       setDidSubmit(true)
       cartctx.clearCart();
   }
-  
- 
+
 
     const cartItem= (<ul className={styles.cartitemul}>{cartctx.items.map((item)=>(
       <CartItem key={item.id} 
@@ -84,7 +84,7 @@ const cartModalContent=
       <BillDetails userphone={phone}/>
       <p className={styles.successcode}>Successfully Your Order Placed!</p>
       <div className={styles.actions}>
-      <button className={styles.btnorder}  onClick={props.hidecart}>
+      <button className={styles.btnorder} onClick={props.hidecart}>
         Close
       </button>
     </div>
