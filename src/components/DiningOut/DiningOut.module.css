@@ -1,0 +1,31 @@
+
+.meal{
+    width: 95%;
+    height: auto;
+    margin: 2rem auto;
+    animation: meals-appear 2s ease-out forwards;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    
+  }
+ .mealul{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+ }
+ .h1tag{
+    color: orange;
+    text-align: center;
+ }
+ .loadingclass{
+   font-size: 20px;
+   color: white;
+   text-align: center;
+ }

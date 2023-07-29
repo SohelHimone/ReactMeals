@@ -1,49 +1,55 @@
-import { useState } from "react";
-import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header/Header";
 import Meal from "./components/Meals/Meals";
 import CartProvider from "./store/cartContext/CartProvider";
-import Addmeal from "./components/Cart/Addmeal";
-
+import {RouterProvider, createBrowserRouter} from 'react-router-dom';
+import RootLayout from "./components/Root/RootLayout";
+import DiningOut from "./components/DiningOut/DiningOut";
+import Nightout from './components/NightOut/NightOut';
 
 
 
 
 function App() {
   
-  const [showCart,setShowCart]=useState(false);
-  const [showAddmeal,setShowAddmeal]=useState(false);
-  
  
-  const showcarthandler=()=>{
-    setShowCart(true)
+  const router=createBrowserRouter([
+    {path:'/',
+     element:<RootLayout/>,
+     children:[{
+      path:'/',
+      element:<Meal/>
+     },
+     {
+      path:'Dinningout',
+      element:<DiningOut/>
+     },
+     {
+      path:'Nightout',
+      element:<Nightout/>
+     }
+    ]  
+  
   }
-
-  const hidecarthandler=()=>{
-    setShowCart(false)
-    
-  }
-
-  const showaddmealhandler=()=>{
-    setShowAddmeal(true)
-  }
-
-  const hideaddmealhandler=()=>{
-    setShowAddmeal(false)
-  }
+  ])
   
 
   return (
+   
+
+    
     <div className="App">
+      
       <CartProvider>
-      {showCart && <Cart hidecart={hidecarthandler}/>}
-      {showAddmeal && <Addmeal hideaddmeal={hideaddmealhandler}/>}
-        <Header showcart={showcarthandler} showAddmealcart={showaddmealhandler}/>
+      <RouterProvider router={router}>
+        <Header/>
         <main>
         <Meal />
         </main>
+        </RouterProvider>
       </CartProvider>
+     
     </div>
+    
   );
 }
 

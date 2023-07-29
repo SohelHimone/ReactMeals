@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from '../Meals/MealAvailable.module.css';
 import MealItem from "./MealItem/MealItem";
 
-
 const MealAvailable=()=>{
     const [meals,setMeals]=useState([]);
     const[loading,setLoading]=useState(true);
@@ -49,8 +48,8 @@ const MealAvailable=()=>{
     }
     return(
         <>
-        <button onClick={fetchDataOnChange} className={styles.newmealbtn}>Check For New Meal</button>
          <section className={styles.meals}>
+         <button onClick={fetchDataOnChange} className={styles.newmealbtn}>Check For New Meal</button>
            <ul>
             {meals.map((meal)=>
             <MealItem key={meal.id}

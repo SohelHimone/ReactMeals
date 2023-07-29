@@ -1,3 +1,12 @@
+.MealSumarry{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10%; 
+}
+
+
 .container{
    width: 35%;
    display: flex;
@@ -33,15 +42,12 @@
         flex-direction: column;
         background-color: rgb(40, 39, 39);
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         color: white;
         padding: 10px 40px;
         border-radius: 10px;
         box-shadow: 2px 4px 8px rgb(106, 104, 104);
         z-index: 1;
-        position: absolute;
-        top:30%;
-    
      }
      .container p{
          font-size: 8px;
